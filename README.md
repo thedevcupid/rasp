@@ -1,12 +1,12 @@
 <div align="center">
 
   <!-- HEADER BANNER -->
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:0d1117&height=150&text=Raspbot&fontSize=60&fontColor=00ffcc&fontAlignY=50" alt="Raspbot Banner" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:0d1117&height=150&text=Rasp%20Bot&fontSize=60&fontColor=00ffcc&fontAlignY=50" alt="Rasp Banner" width="100%" />
 
   <br><br>
 
   <p>
-    <b>Automating the network, one command at a time.</b>
+    <b>Automating the network, managing economy, and executing commands.</b>
   </p>
 
   <!-- BADGES -->
@@ -22,16 +22,16 @@
 
 <h3>⚡ System Overview</h3>
 <p>
-  Raspbot is a custom-built automation engine designed for seamless interaction and server management. Built on a lightweight Node.js architecture, it provides rapid response times and scalable command modularity.
+  Rasp is a custom-built Discord automation engine designed for seamless server management and user interaction. Operating on a scalable Node.js backend, it features a modular command handler and an integrated local economy tracking system.
 </p>
 
 <br>
 
-<h3>🛠️ Core Features</h3>
+<h3>🛠️ Core Architecture</h3>
 <ul>
-  <li><b>Modular Command Handler:</b> Easily add or modify commands without disrupting core operations.</li>
-  <li><b>Automated Response System:</b> High-speed processing for real-time interaction.</li>
-  <li><b>Secure Environment:</b> Token and configuration variables are strictly sandboxed.</li>
+  <li><b>Modular Command Handler (<code>index.js</code>):</b> Rapid response interaction logic and core routing.</li>
+  <li><b>Integrated Economy System (<code>economy.json</code>):</b> Tracks user balances, transactions, and server economy using persistent local JSON storage.</li>
+  <li><b>Secure Environment:</b> Tokens and sensitive variables are sandboxed securely within <code>.env</code> configurations.</li>
 </ul>
 
 <hr>
@@ -39,10 +39,11 @@
 <h3>💻 Installation & Deployment</h3>
 
 <h4>1. Clone the Directory</h4>
-<pre><code>git clone https://github.com/thedevcupid/raspbot.git
-cd raspbot</code></pre>
+<pre><code>git clone https://github.com/thedevcupid/rasp.git
+cd rasp</code></pre>
 
 <h4>2. Initialize Dependencies</h4>
+<p>This will rebuild the ignored <code>node_modules/</code> directory.</p>
 <pre><code>npm install</code></pre>
 
 <h4>3. Environment Configuration</h4>
@@ -51,7 +52,11 @@ cd raspbot</code></pre>
 CLIENT_ID=your_client_id_here
 PREFIX=!</code></pre>
 
-<h4>4. Boot Sequence</h4>
+<h4>4. Economy Initialization</h4>
+<p>Ensure <code>economy.json</code> is present in the root directory. If tracking starts fresh, initialize it with an empty object:</p>
+<pre><code>{}</code></pre>
+
+<h4>5. Boot Sequence</h4>
 <pre><code>node index.js</code></pre>
 
 <hr>
@@ -70,6 +75,11 @@ PREFIX=!</code></pre>
     <td>Public</td>
   </tr>
   <tr>
+    <td><code>/balance</code></td>
+    <td>Retrieves current user balance from the economy matrix.</td>
+    <td>Public</td>
+  </tr>
+  <tr>
     <td><code>/status</code></td>
     <td>Displays current uptime and active modules.</td>
     <td>Admin</td>
@@ -79,7 +89,7 @@ PREFIX=!</code></pre>
 <hr>
 
 <div align="center">
-  <p>⚠️ <b>Security Notice:</b> Do not expose your <code>.env</code> variables. If deploying to a VPS, ensure your firewall rules are properly configured to allow necessary webhook traffic.</p>
+  <p>⚠️ <b>Security Notice:</b> The <code>node_modules/</code> and <code>.env</code> files are strictly ignored via <code>.gitignore</code> to prevent token leaks and repository bloat.</p>
   <br>
   <p>Developed by <a href="https://github.com/thedevcupid" style="color: #00ffcc; text-decoration: none;"><b>Zyro</b></a></p>
 </div>
