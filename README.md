@@ -91,5 +91,5 @@ PREFIX=!</code></pre>
 <div align="center">
   <p>⚠️ <b>Security Notice:</b> The <code>node_modules/</code> and <code>.env</code> files are strictly ignored via <code>.gitignore</code> to prevent token leaks and repository bloat.</p>
   <br>
-  <p>Developed by <a href="https://github.com/thedevcupid" style="color: #00ffcc; text-decoration: none;"><b>Zyro</b></a></p>
+  <p>Developed by <a href="https://github.com/thedevcupid" style="color: #00ffcc; text-decoration: none;"><b>Arambh</b></a></p>
 </div>
