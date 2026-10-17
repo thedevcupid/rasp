@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- HEADER BANNER -->
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:0d1117&height=150&text=Rasp%20Bot&fontSize=60&fontColor=00ffcc&fontAlignY=50" alt="Rasp Banner" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:0d1117&height=150&text=Rasp%20Bot&fontSize=60&fontColor=00ffcc&fontAlignY=50" alt="Rasp Banner" width="100%" />d
 
   <br><br>
 
